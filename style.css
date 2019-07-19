@@ -1,0 +1,1389 @@
+/*
+---------------------------------
+RESET
+---------------------------------
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+---------------------------------
+BASIC PAGE LAYOUT STYLES 
+---------------------------------
+*/
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  background-color: #ffffff;
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-color: #f2f2f2;
+  }
+}
+
+.cf:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*
+---------------------------------
+PAGE WRAPPER & STICKY FOOTER
+---------------------------------
+*/
+html, body {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+@media (min-width: 1200px) {
+  html, body {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1600px) {
+  html, body {
+    font-size: 24px;
+  }
+}
+
+.page-wrapper {
+  min-height: 300px;
+  min-height: 80vh;
+}
+
+/*
+---------------------------------
+TYPOGRAPHY
+---------------------------------
+*/
+h1 {
+  font-size: 1rem;
+  padding: 0.25em 0 0.25em 0;
+}
+
+a {
+  text-decoration: none;
+  color: #0000ee;
+}
+
+a:active, a:hover, a:focus, a:visited {
+  color: #0000ee;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background: #000066;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+  outline: none;
+}
+
+button.restart {
+  width: 200px;
+  margin: 60px auto 20px auto;
+  text-align: center;
+  display: block;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/*
+---------------------------------
+ HEADER
+---------------------------------
+*/
+#page-header {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0 0;
+  background-color: #ffffff;
+}
+
+#logo {
+  width: 150px;
+  display: block;
+  padding-left: 2%;
+}
+
+#logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.header-description {
+  width: 98%;
+  display: block;
+  line-height: 40px;
+  font-size: 24px;
+  padding: 0 0 0 2%;
+}
+
+.page-wrapper-inner > h1 {
+  margin: 0 auto;
+  padding: 10px 30px 30px 2%;
+}
+
+@media (min-width: 1200px) {
+  #page-header {
+    padding: 25px 0;
+  }
+  #logo {
+    float: left;
+  }
+  .header-description {
+    width: 700px;
+    display: block;
+    float: right;
+    line-height: 60px;
+    text-align: right;
+    padding-right: 2%;
+  }
+  .page-wrapper-inner > h1 {
+    width: 96%;
+    margin: 0 auto;
+    padding: 40px 2%;
+  }
+}
+
+@media (min-width: 1600px) {
+  #page-header {
+    padding: 40px 0;
+  }
+  .header-description {
+    font-size: 36px;
+  }
+}
+
+/*
+---------------------------------
+ FOOTER
+---------------------------------
+*/
+.page-footer {
+  background-color: #e7e7e7;
+  color: black;
+  margin-top: 100px;
+}
+
+.page-footer .page-footer-inner {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  font-size: 12px;
+  overflow: hidden;
+  padding-top: 15px;
+}
+
+.page-footer .page-footer-inner .credits {
+  padding: 0 0 0 2%;
+}
+
+.page-footer .page-footer-inner .license {
+  padding: 10px 0 0 2%;
+  position: relative;
+  min-height: 70px;
+  padding-top: 10px;
+}
+
+.page-footer .page-footer-inner .license .license-image {
+  position: absolute;
+  top: 10px;
+  left: 2%;
+}
+
+.page-footer .page-footer-inner .license .license-image img {
+  width: 100px;
+  height: auto;
+}
+
+.page-footer .page-footer-inner .license .license-text {
+  top: 0;
+  padding-left: 115px;
+}
+
+@media (min-width: 1200px) {
+  .page-footer {
+    background-color: white;
+  }
+  .page-footer .page-footer-inner {
+    font-size: 16px;
+  }
+  .page-footer .page-footer-inner .credits {
+    width: 25%;
+    float: left;
+    line-height: 4em;
+  }
+  .page-footer .page-footer-inner .license {
+    width: 60%;
+    padding-right: 2%;
+    float: right;
+  }
+  .page-footer .page-footer-inner .license .license-text {
+    padding-right: 125px;
+    text-align: right;
+  }
+  .page-footer .page-footer-inner .license .license-image {
+    left: unset;
+    right: 2%;
+  }
+  .page-footer .page-footer-inner .license .license-image img {
+    width: auto;
+    height: 40px;
+  }
+}
+
+#quiz > .scene {
+  text-align: left;
+  color: rgba(255, 255, 255, 0.5);
+  /* colors */
+  /* Toggling scenes */
+}
+
+#quiz > .scene > h1 {
+  color: #000000;
+  /* colors */
+  padding: 10px 20px 10px 20px;
+}
+
+#quiz > .scene span.question {
+  display: block;
+}
+
+#quiz > .scene span.question.hidden-sibling {
+  display: none;
+}
+
+#quiz > .scene .scene {
+  display: none;
+}
+
+#quiz > .scene .open > a {
+  position: relative;
+  z-index: 1;
+}
+
+#quiz > .scene .open > .scene {
+  display: block;
+  z-index: 1;
+  position: relative;
+}
+
+/* general */
+.question .question a {
+  color: rgba(255, 255, 255, 0.5);
+  /* colors */
+}
+
+.question .question a:hover {
+  color: white;
+  /* colors */
+}
+
+svg.icon {
+  display: none;
+}
+
+svg.icon.show {
+  display: block;
+}
+
+/* top level questions */
+/* #quiz > .scene > ul  > li */
+.chapter {
+  padding: 0;
+  min-height: 80px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+}
+
+.chapter div.icon-outer {
+  width: 60px;
+  height: 80px;
+  position: absolute;
+  top: 0px;
+  left: 16px;
+}
+
+.chapter div.icon {
+  width: 60px;
+  height: 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.chapter > .question > a {
+  /* primary question aka chapter title */
+  color: #ffffff;
+  /* colors */
+  line-height: 1.25em;
+  height: 80px;
+  position: relative;
+  padding-left: 2em;
+  display: block;
+  padding: 0px 36px 0;
+}
+
+.chapter > .question > a span.chapter-title {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 102px;
+  right: 20px;
+}
+
+.chapter.not-active:nth-child(even) {
+  /* Rollover state for other chapters */
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.chapter.not-active:nth-child(odd) {
+  /* Rollover state for other chapters */
+  background: transparent;
+}
+
+.chapter.hidden-sibling {
+  /* Hide others when open */
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .chapter {
+    min-height: 80px;
+  }
+  .chapter div.icon-outer {
+    height: 80px;
+    left: 26px;
+  }
+  .chapter > .question > a {
+    height: 80px;
+  }
+  .chapter > .question > a span.chapter-title {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 112px;
+    right: 20px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .chapter {
+    min-height: 100px;
+  }
+  .chapter div.icon-outer {
+    height: 100px;
+  }
+  .chapter > .question > a {
+    height: 100px;
+  }
+}
+
+/* open state */
+#quiz .chapter.active-chapter:hover > .question > a {
+  color: white;
+}
+
+#quiz .chapter.active-chapter > .open.question {
+  position: relative;
+  padding-bottom: 40px;
+  min-height: 300px;
+}
+
+#quiz .chapter.active-chapter > .open.question:after {
+  z-index: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-size: auto 120%;
+  background-repeat: no-repeat;
+  background-position: 101.5% 60%;
+  opacity: 0.1;
+}
+
+/* Question Indentation */
+.question > .scene-with-questions > h1 {
+  padding-left: 15px;
+}
+
+.question .question > a {
+  margin-left: 30px;
+}
+
+@media (min-width: 1200px) {
+  .question > .scene-with-questions > h1 {
+    padding-left: 20px;
+  }
+  .question .question > a {
+    margin-left: 40px;
+  }
+}
+
+.question .question > .scene-with-questions > h1 {
+  padding-left: 30px;
+}
+
+.question .question .question > a {
+  margin-left: 45px;
+}
+
+@media (min-width: 1200px) {
+  .question .question > .scene-with-questions > h1 {
+    padding-left: 40px;
+  }
+  .question .question .question > a {
+    margin-left: 60px;
+  }
+}
+
+.question .question .question > .scene-with-questions > h1 {
+  padding-left: 45px;
+}
+
+.question .question .question .question > a {
+  margin-left: 60px;
+}
+
+@media (min-width: 1200px) {
+  .question .question .question > .scene-with-questions > h1 {
+    padding-left: 60px;
+  }
+  .question .question .question .question > a {
+    margin-left: 80px;
+  }
+}
+
+.question .question .question .question > .scene-with-questions > h1 {
+  padding-left: 60px;
+}
+
+.question .question .question .question .question > a {
+  margin-left: 75px;
+}
+
+@media (min-width: 1200px) {
+  .question .question .question .question > .scene-with-questions > h1 {
+    padding-left: 80px;
+  }
+  .question .question .question .question .question > a {
+    margin-left: 100px;
+  }
+}
+
+.question .question .question .question .question > .scene-with-questions > h1 {
+  padding-left: 75px;
+}
+
+.question .question .question .question .question .question > a {
+  margin-left: 90px;
+}
+
+@media (min-width: 1200px) {
+  .question .question .question .question .question > .scene-with-questions > h1 {
+    padding-left: 100px;
+  }
+  .question .question .question .question .question .question > a {
+    margin-left: 120px;
+  }
+}
+
+.question .question .question .question .question .question > .scene-with-questions > h1 {
+  padding-left: 90px;
+}
+
+.question .question .question .question .question .question .question > a {
+  margin-left: 105px;
+}
+
+@media (min-width: 1200px) {
+  .question .question .question .question .question .question > .scene-with-questions > h1 {
+    padding-left: 120px;
+  }
+  .question .question .question .question .question .question .question > a {
+    margin-left: 140px;
+  }
+}
+
+.question .question .question .question .question .question .question > .scene-with-questions > h1 {
+  padding-left: 105px;
+}
+
+.question .question .question .question .question .question .question .question > a {
+  margin-left: 120px;
+}
+
+@media (min-width: 1200px) {
+  .question .question .question .question .question .question .question > .scene-with-questions > h1 {
+    padding-left: 140px;
+  }
+  .question .question .question .question .question .question .question .question > a {
+    margin-left: 160px;
+  }
+}
+
+.question .question .question .question .question .question .question .question > .scene-with-questions > h1 {
+  padding-left: 120px;
+}
+
+.question .question .question .question .question .question .question .question .question > a {
+  margin-left: 135px;
+}
+
+@media (min-width: 1200px) {
+  .question .question .question .question .question .question .question .question > .scene-with-questions > h1 {
+    padding-left: 160px;
+  }
+  .question .question .question .question .question .question .question .question .question > a {
+    margin-left: 180px;
+  }
+}
+
+.question .question .question .question .question .question .question .question .question > .scene-with-questions > h1 {
+  padding-left: 135px;
+}
+
+.question .question .question .question .question .question .question .question .question .question > a {
+  margin-left: 150px;
+}
+
+@media (min-width: 1200px) {
+  .question .question .question .question .question .question .question .question .question > .scene-with-questions > h1 {
+    padding-left: 180px;
+  }
+  .question .question .question .question .question .question .question .question .question .question > a {
+    margin-left: 200px;
+  }
+}
+
+.question .question .question .question .question .question .question .question .question .question > .scene-with-questions > h1 {
+  padding-left: 150px;
+}
+
+.question .question .question .question .question .question .question .question .question .question .question > a {
+  margin-left: 165px;
+}
+
+@media (min-width: 1200px) {
+  .question .question .question .question .question .question .question .question .question .question > .scene-with-questions > h1 {
+    padding-left: 200px;
+  }
+  .question .question .question .question .question .question .question .question .question .question .question > a {
+    margin-left: 220px;
+  }
+}
+
+.question .question .question .question .question .question .question .question .question .question .question > .scene-with-questions > h1 {
+  padding-left: 165px;
+}
+
+.question .question .question .question .question .question .question .question .question .question .question .question > a {
+  margin-left: 180px;
+}
+
+@media (min-width: 1200px) {
+  .question .question .question .question .question .question .question .question .question .question .question > .scene-with-questions > h1 {
+    padding-left: 220px;
+  }
+  .question .question .question .question .question .question .question .question .question .question .question .question > a {
+    margin-left: 240px;
+  }
+}
+
+.question .question .question .question .question .question .question .question .question .question .question .question > .scene-with-questions > h1 {
+  padding-left: 180px;
+}
+
+.question .question .question .question .question .question .question .question .question .question .question .question .question > a {
+  margin-left: 195px;
+}
+
+@media (min-width: 1200px) {
+  .question .question .question .question .question .question .question .question .question .question .question .question > .scene-with-questions > h1 {
+    padding-left: 240px;
+  }
+  .question .question .question .question .question .question .question .question .question .question .question .question .question > a {
+    margin-left: 260px;
+  }
+}
+
+.question .question .question .question .question .question .question .question .question .question .question .question .question > .scene-with-questions > h1 {
+  padding-left: 195px;
+}
+
+.question .question .question .question .question .question .question .question .question .question .question .question .question .question > a {
+  margin-left: 210px;
+}
+
+@media (min-width: 1200px) {
+  .question .question .question .question .question .question .question .question .question .question .question .question .question > .scene-with-questions > h1 {
+    padding-left: 260px;
+  }
+  .question .question .question .question .question .question .question .question .question .question .question .question .question .question > a {
+    margin-left: 280px;
+  }
+}
+
+.question .question .question .question .question .question .question .question .question .question .question .question .question .question > .scene-with-questions > h1 {
+  padding-left: 210px;
+}
+
+.question .question .question .question .question .question .question .question .question .question .question .question .question .question .question > a {
+  margin-left: 225px;
+}
+
+@media (min-width: 1200px) {
+  .question .question .question .question .question .question .question .question .question .question .question .question .question .question > .scene-with-questions > h1 {
+    padding-left: 280px;
+  }
+  .question .question .question .question .question .question .question .question .question .question .question .question .question .question .question > a {
+    margin-left: 300px;
+  }
+}
+
+.question .question .question .question .question .question .question .question .question .question .question .question .question .question .question > .scene-with-questions > h1 {
+  padding-left: 225px;
+}
+
+.question .question .question .question .question .question .question .question .question .question .question .question .question .question .question .question > a {
+  margin-left: 240px;
+}
+
+@media (min-width: 1200px) {
+  .question .question .question .question .question .question .question .question .question .question .question .question .question .question .question > .scene-with-questions > h1 {
+    padding-left: 300px;
+  }
+  .question .question .question .question .question .question .question .question .question .question .question .question .question .question .question .question > a {
+    margin-left: 320px;
+  }
+}
+
+/* sub questions */
+.question .question {
+  padding: 5px 0;
+}
+
+.question .question:nth-child(odd) {
+  background: transparent;
+}
+
+.question .question > a {
+  line-height: 1.5;
+  position: relative;
+  display: block;
+}
+
+.question .question > a:after {
+  position: absolute;
+  content: "+";
+  text-align: center;
+  vertical-align: middle;
+  color: rgba(255, 255, 255, 0.5);
+  /* colors */
+  left: -10px;
+  width: 0.75em;
+  height: 0.75em;
+  line-height: 0.75em;
+  font-size: 0.625em;
+  top: 8px;
+}
+
+.question .question > a:hover:after {
+  color: white;
+  /* colors */
+}
+
+.question .question.open > a {
+  margin-bottom: 10px;
+}
+
+.question .question.open > a:after {
+  content: "-";
+}
+
+@media (min-width: 1200px) {
+  .question .question {
+    padding: 0;
+  }
+  .question .question > a:after {
+    left: -16px;
+    top: 12px;
+  }
+}
+
+/* questions vs. answers */
+#quiz > .scene {
+  /* questions */
+  /* answers */
+}
+
+#quiz > .scene .scene-with-questions {
+  overflow: hidden;
+}
+
+#quiz > .scene .scene-with-questions h1 {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 30px;
+  line-height: 1.5;
+}
+
+#quiz > .scene .scene-with-questions p {
+  padding: 0px 0px 0 0;
+}
+
+#quiz > .scene .scene-with-questions .question a {
+  padding-right: 30px;
+}
+
+#quiz > .scene .scene-with-answer {
+  background: #f7f8f9;
+  /* colors */
+  color: #000000;
+  /* colors */
+  padding-bottom: 50px;
+  position: relative;
+  display: block;
+}
+
+#quiz > .scene .scene-with-answer > h3:first-child {
+  display: none;
+}
+
+#quiz > .scene .scene-with-answer > h1 {
+  padding: 30px 120px 30px 20px;
+  margin-left: 0;
+  margin-bottom: 100px;
+  z-index: 1;
+  position: relative;
+}
+
+#quiz > .scene .scene-with-answer > p,
+#quiz > .scene .scene-with-answer > ul,
+#quiz > .scene .scene-with-answer > ol {
+  padding: 0px 30px 10px 20px;
+}
+
+#quiz > .scene .scene-with-answer > ul {
+  list-style-type: disc;
+}
+
+#quiz > .scene .scene-with-answer > ol {
+  list-style-type: decimal;
+}
+
+#quiz > .scene .scene-with-answer > ul,
+#quiz > .scene .scene-with-answer > ol {
+  list-style-position: outside;
+  padding-left: 35px;
+}
+
+#quiz > .scene .scene-with-answer > ul li p,
+#quiz > .scene .scene-with-answer > ol li p {
+  margin-bottom: 10px;
+  display: block;
+}
+
+#quiz > .scene .scene-with-answer:before {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 120px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#quiz > .scene .scene-with-answer:after {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 180px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-size: 120px auto;
+  background-repeat: no-repeat;
+  background-position: 100% 0px;
+}
+
+#quiz > .scene .scene-with-answer.pass:before {
+  background-color: #74cf56;
+}
+
+#quiz > .scene .scene-with-answer.pass:after {
+  background-image: url("../images/ico_Traffic_Green.png");
+}
+
+#quiz > .scene .scene-with-answer.fail:before {
+  background-color: #dc4a55;
+}
+
+#quiz > .scene .scene-with-answer.fail:after {
+  background-image: url("../images/ico_Traffic_Red.png");
+}
+
+#quiz > .scene .scene-with-answer.maybe:before {
+  background-color: #ffce4b;
+}
+
+#quiz > .scene .scene-with-answer.maybe:after {
+  background-image: url("../images/ico_Traffic_Yellow.png");
+}
+
+@media (min-width: 1200px) {
+  #quiz > .scene .scene-with-answer > p,
+  #quiz > .scene .scene-with-answer > ul {
+    max-width: 66%;
+  }
+  #quiz > .scene .scene-with-answer > h1 {
+    margin-bottom: 50px;
+  }
+  #quiz > .scene .scene-with-answer.pass:after, #quiz > .scene .scene-with-answer.fail:after, #quiz > .scene .scene-with-answer.maybe:after {
+    height: 400px;
+    width: 33%;
+    background-size: 200px auto;
+    background-position: 95% 120px;
+  }
+}
+
+.chapter.active-chapter.answer-mode > .open {
+  background-image: none;
+}
+
+.chapter.active-chapter.answer-mode .question > a,
+.chapter.active-chapter.answer-mode .scene-with-questions > h1 {
+  display: none;
+}
+
+.chapter.active-chapter.answer-mode .question > a.show,
+.chapter.active-chapter.answer-mode .scene-with-questions > h1.show {
+  display: block;
+}
+
+.chapter:nth-child(1) {
+  /* closed panel backround gradient */
+  background-image: -webkit-gradient(linear, left top, right top, from(#001231), to(#0260fb));
+  background-image: linear-gradient(to right, #001231, #0260fb);
+}
+
+.chapter:nth-child(1) div.icon {
+  background-image: url("../images/icons/ico_1_music.png");
+}
+
+.chapter:nth-child(1):hover {
+  background-image: none;
+  background-color: rgba(1, 57, 150, 0.99);
+}
+
+.chapter:nth-child(1) > .open.question {
+  /* open panel backround solid color */
+  background-color: #013996;
+}
+
+.chapter:nth-child(1) .active-question {
+  /* active question */
+  background-color: rgba(1, 51, 135, 0.5);
+}
+
+.chapter:nth-child(1) .question .scene .question:nth-child(even) {
+  /* sub questions alternate stripes */
+  background-color: rgba(1, 51, 135, 0.5);
+}
+
+.chapter:nth-child(1) .question .scene .question.open {
+  /* remove stripe on open */
+  background-color: transparent;
+}
+
+.chapter:nth-child(1) button.restart {
+  /* restart button */
+  background-color: #013996;
+}
+
+@media (min-width: 1200px) {
+  .chapter:nth-child(1) > .open.question:after {
+    /* open panel backround image */
+    background-image: url("../images/icons/ico_1_music.png");
+  }
+  .chapter:nth-child(1) .active-question {
+    /* active question */
+    background-color: transparent;
+  }
+  .chapter:nth-child(1) .question .scene .question:nth-child(odd),
+  .chapter:nth-child(1) .question .scene .question:nth-child(even) {
+    /* sub questions */
+    background-color: transparent;
+  }
+  .chapter:nth-child(1) .question .scene .question:nth-child(odd).hovering,
+  .chapter:nth-child(1) .question .scene .question:nth-child(even).hovering {
+    background-color: rgba(1, 51, 135, 0.5);
+  }
+  .chapter:nth-child(1) .question .scene .question:nth-child(odd).open.hovering,
+  .chapter:nth-child(1) .question .scene .question:nth-child(even).open.hovering {
+    background-color: transparent;
+  }
+}
+
+.chapter:nth-child(2) {
+  /* closed panel backround gradient */
+  background-image: -webkit-gradient(linear, left top, right top, from(#06283f), to(#289be9));
+  background-image: linear-gradient(to right, #06283f, #289be9);
+}
+
+.chapter:nth-child(2) div.icon {
+  background-image: url("../images/icons/ico_2_book.png");
+}
+
+.chapter:nth-child(2):hover {
+  background-image: none;
+  background-color: rgba(16, 99, 155, 0.99);
+}
+
+.chapter:nth-child(2) > .open.question {
+  /* open panel backround solid color */
+  background-color: #10639b;
+}
+
+.chapter:nth-child(2) .active-question {
+  /* active question */
+  background-color: rgba(15, 90, 141, 0.5);
+}
+
+.chapter:nth-child(2) .question .scene .question:nth-child(even) {
+  /* sub questions alternate stripes */
+  background-color: rgba(15, 90, 141, 0.5);
+}
+
+.chapter:nth-child(2) .question .scene .question.open {
+  /* remove stripe on open */
+  background-color: transparent;
+}
+
+.chapter:nth-child(2) button.restart {
+  /* restart button */
+  background-color: #10639b;
+}
+
+@media (min-width: 1200px) {
+  .chapter:nth-child(2) > .open.question:after {
+    /* open panel backround image */
+    background-image: url("../images/icons/ico_2_book.png");
+  }
+  .chapter:nth-child(2) .active-question {
+    /* active question */
+    background-color: transparent;
+  }
+  .chapter:nth-child(2) .question .scene .question:nth-child(odd),
+  .chapter:nth-child(2) .question .scene .question:nth-child(even) {
+    /* sub questions */
+    background-color: transparent;
+  }
+  .chapter:nth-child(2) .question .scene .question:nth-child(odd).hovering,
+  .chapter:nth-child(2) .question .scene .question:nth-child(even).hovering {
+    background-color: rgba(15, 90, 141, 0.5);
+  }
+  .chapter:nth-child(2) .question .scene .question:nth-child(odd).open.hovering,
+  .chapter:nth-child(2) .question .scene .question:nth-child(even).open.hovering {
+    background-color: transparent;
+  }
+}
+
+.chapter:nth-child(3) {
+  /* closed panel backround gradient */
+  background-image: -webkit-gradient(linear, left top, right top, from(#063d47), to(#2bceee));
+  background-image: linear-gradient(to right, #063d47, #2bceee);
+}
+
+.chapter:nth-child(3) div.icon {
+  background-image: url("../images/icons/ico_3_code.png");
+}
+
+.chapter:nth-child(3):hover {
+  background-image: none;
+  background-color: rgba(13, 141, 166, 0.99);
+}
+
+.chapter:nth-child(3) > .open.question {
+  /* open panel backround solid color */
+  background-color: #0d8da6;
+}
+
+.chapter:nth-child(3) .active-question {
+  /* active question */
+  background-color: rgba(12, 129, 152, 0.5);
+}
+
+.chapter:nth-child(3) .question .scene .question:nth-child(even) {
+  /* sub questions alternate stripes */
+  background-color: rgba(12, 129, 152, 0.5);
+}
+
+.chapter:nth-child(3) .question .scene .question.open {
+  /* remove stripe on open */
+  background-color: transparent;
+}
+
+.chapter:nth-child(3) button.restart {
+  /* restart button */
+  background-color: #0d8da6;
+}
+
+@media (min-width: 1200px) {
+  .chapter:nth-child(3) > .open.question:after {
+    /* open panel backround image */
+    background-image: url("../images/icons/ico_3_code.png");
+  }
+  .chapter:nth-child(3) .active-question {
+    /* active question */
+    background-color: transparent;
+  }
+  .chapter:nth-child(3) .question .scene .question:nth-child(odd),
+  .chapter:nth-child(3) .question .scene .question:nth-child(even) {
+    /* sub questions */
+    background-color: transparent;
+  }
+  .chapter:nth-child(3) .question .scene .question:nth-child(odd).hovering,
+  .chapter:nth-child(3) .question .scene .question:nth-child(even).hovering {
+    background-color: rgba(12, 129, 152, 0.5);
+  }
+  .chapter:nth-child(3) .question .scene .question:nth-child(odd).open.hovering,
+  .chapter:nth-child(3) .question .scene .question:nth-child(even).open.hovering {
+    background-color: transparent;
+  }
+}
+
+.chapter:nth-child(4) {
+  /* closed panel backround gradient */
+  background-image: -webkit-gradient(linear, left top, right top, from(#095954), to(#42ece1));
+  background-image: linear-gradient(to right, #095954, #42ece1);
+}
+
+.chapter:nth-child(4) div.icon {
+  background-image: url("../images/icons/ico_4_image.png");
+}
+
+.chapter:nth-child(4):hover {
+  background-image: none;
+  background-color: rgba(18, 182, 171, 0.99);
+}
+
+.chapter:nth-child(4) > .open.question {
+  /* open panel backround solid color */
+  background-color: #12b6ab;
+}
+
+.chapter:nth-child(4) .active-question {
+  /* active question */
+  background-color: rgba(17, 168, 158, 0.5);
+}
+
+.chapter:nth-child(4) .question .scene .question:nth-child(even) {
+  /* sub questions alternate stripes */
+  background-color: rgba(17, 168, 158, 0.5);
+}
+
+.chapter:nth-child(4) .question .scene .question.open {
+  /* remove stripe on open */
+  background-color: transparent;
+}
+
+.chapter:nth-child(4) button.restart {
+  /* restart button */
+  background-color: #12b6ab;
+}
+
+@media (min-width: 1200px) {
+  .chapter:nth-child(4) > .open.question:after {
+    /* open panel backround image */
+    background-image: url("../images/icons/ico_4_image.png");
+  }
+  .chapter:nth-child(4) .active-question {
+    /* active question */
+    background-color: transparent;
+  }
+  .chapter:nth-child(4) .question .scene .question:nth-child(odd),
+  .chapter:nth-child(4) .question .scene .question:nth-child(even) {
+    /* sub questions */
+    background-color: transparent;
+  }
+  .chapter:nth-child(4) .question .scene .question:nth-child(odd).hovering,
+  .chapter:nth-child(4) .question .scene .question:nth-child(even).hovering {
+    background-color: rgba(17, 168, 158, 0.5);
+  }
+  .chapter:nth-child(4) .question .scene .question:nth-child(odd).open.hovering,
+  .chapter:nth-child(4) .question .scene .question:nth-child(even).open.hovering {
+    background-color: transparent;
+  }
+}
+
+.chapter:nth-child(5) {
+  /* closed panel backround gradient */
+  background-image: -webkit-gradient(linear, left top, right top, from(#0e4f47), to(#4bdecc));
+  background-image: linear-gradient(to right, #0e4f47, #4bdecc);
+}
+
+.chapter:nth-child(5) div.icon {
+  background-image: url("../images/icons/ico_5_journal.png");
+}
+
+.chapter:nth-child(5):hover {
+  background-image: none;
+  background-color: rgba(30, 165, 148, 0.99);
+}
+
+.chapter:nth-child(5) > .open.question {
+  /* open panel backround solid color */
+  background-color: #1ea594;
+}
+
+.chapter:nth-child(5) .active-question {
+  /* active question */
+  background-color: rgba(28, 152, 136, 0.5);
+}
+
+.chapter:nth-child(5) .question .scene .question:nth-child(even) {
+  /* sub questions alternate stripes */
+  background-color: rgba(28, 152, 136, 0.5);
+}
+
+.chapter:nth-child(5) .question .scene .question.open {
+  /* remove stripe on open */
+  background-color: transparent;
+}
+
+.chapter:nth-child(5) button.restart {
+  /* restart button */
+  background-color: #1ea594;
+}
+
+@media (min-width: 1200px) {
+  .chapter:nth-child(5) > .open.question:after {
+    /* open panel backround image */
+    background-image: url("../images/icons/ico_5_journal.png");
+  }
+  .chapter:nth-child(5) .active-question {
+    /* active question */
+    background-color: transparent;
+  }
+  .chapter:nth-child(5) .question .scene .question:nth-child(odd),
+  .chapter:nth-child(5) .question .scene .question:nth-child(even) {
+    /* sub questions */
+    background-color: transparent;
+  }
+  .chapter:nth-child(5) .question .scene .question:nth-child(odd).hovering,
+  .chapter:nth-child(5) .question .scene .question:nth-child(even).hovering {
+    background-color: rgba(28, 152, 136, 0.5);
+  }
+  .chapter:nth-child(5) .question .scene .question:nth-child(odd).open.hovering,
+  .chapter:nth-child(5) .question .scene .question:nth-child(even).open.hovering {
+    background-color: transparent;
+  }
+}
+
+.chapter:nth-child(6) {
+  /* closed panel backround gradient */
+  background-image: -webkit-gradient(linear, left top, right top, from(#124439), to(#52d0b4));
+  background-image: linear-gradient(to right, #124439, #52d0b4);
+}
+
+.chapter:nth-child(6) div.icon {
+  background-image: url("../images/icons/ico_6_map.png");
+}
+
+.chapter:nth-child(6):hover {
+  background-image: none;
+  background-color: rgba(40, 148, 124, 0.99);
+}
+
+.chapter:nth-child(6) > .open.question {
+  /* open panel backround solid color */
+  background-color: #28947c;
+}
+
+.chapter:nth-child(6) .active-question {
+  /* active question */
+  background-color: rgba(37, 136, 114, 0.5);
+}
+
+.chapter:nth-child(6) .question .scene .question:nth-child(even) {
+  /* sub questions alternate stripes */
+  background-color: rgba(37, 136, 114, 0.5);
+}
+
+.chapter:nth-child(6) .question .scene .question.open {
+  /* remove stripe on open */
+  background-color: transparent;
+}
+
+.chapter:nth-child(6) button.restart {
+  /* restart button */
+  background-color: #28947c;
+}
+
+@media (min-width: 1200px) {
+  .chapter:nth-child(6) > .open.question:after {
+    /* open panel backround image */
+    background-image: url("../images/icons/ico_6_map.png");
+  }
+  .chapter:nth-child(6) .active-question {
+    /* active question */
+    background-color: transparent;
+  }
+  .chapter:nth-child(6) .question .scene .question:nth-child(odd),
+  .chapter:nth-child(6) .question .scene .question:nth-child(even) {
+    /* sub questions */
+    background-color: transparent;
+  }
+  .chapter:nth-child(6) .question .scene .question:nth-child(odd).hovering,
+  .chapter:nth-child(6) .question .scene .question:nth-child(even).hovering {
+    background-color: rgba(37, 136, 114, 0.5);
+  }
+  .chapter:nth-child(6) .question .scene .question:nth-child(odd).open.hovering,
+  .chapter:nth-child(6) .question .scene .question:nth-child(even).open.hovering {
+    background-color: transparent;
+  }
+}
+
+.chapter:nth-child(7) {
+  /* closed panel backround gradient */
+  background-image: -webkit-gradient(linear, left top, right top, from(#173a2c), to(#5ebf98));
+  background-image: linear-gradient(to right, #173a2c, #5ebf98);
+}
+
+.chapter:nth-child(7) div.icon {
+  background-image: url("../images/icons/ico_7_video.png");
+}
+
+.chapter:nth-child(7):hover {
+  background-image: none;
+  background-color: rgba(52, 131, 99, 0.99);
+}
+
+.chapter:nth-child(7) > .open.question {
+  /* open panel backround solid color */
+  background-color: #348363;
+}
+
+.chapter:nth-child(7) .active-question {
+  /* active question */
+  background-color: rgba(48, 120, 91, 0.5);
+}
+
+.chapter:nth-child(7) .question .scene .question:nth-child(even) {
+  /* sub questions alternate stripes */
+  background-color: rgba(48, 120, 91, 0.5);
+}
+
+.chapter:nth-child(7) .question .scene .question.open {
+  /* remove stripe on open */
+  background-color: transparent;
+}
+
+.chapter:nth-child(7) button.restart {
+  /* restart button */
+  background-color: #348363;
+}
+
+@media (min-width: 1200px) {
+  .chapter:nth-child(7) > .open.question:after {
+    /* open panel backround image */
+    background-image: url("../images/icons/ico_7_video.png");
+  }
+  .chapter:nth-child(7) .active-question {
+    /* active question */
+    background-color: transparent;
+  }
+  .chapter:nth-child(7) .question .scene .question:nth-child(odd),
+  .chapter:nth-child(7) .question .scene .question:nth-child(even) {
+    /* sub questions */
+    background-color: transparent;
+  }
+  .chapter:nth-child(7) .question .scene .question:nth-child(odd).hovering,
+  .chapter:nth-child(7) .question .scene .question:nth-child(even).hovering {
+    background-color: rgba(48, 120, 91, 0.5);
+  }
+  .chapter:nth-child(7) .question .scene .question:nth-child(odd).open.hovering,
+  .chapter:nth-child(7) .question .scene .question:nth-child(even).open.hovering {
+    background-color: transparent;
+  }
+}
